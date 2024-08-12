@@ -7,6 +7,8 @@ import Home from './components/Home/Home';
 import PrivateRoute from './utils/PrivateRoute';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AlertComponent from './components/AlertComponent/AlertComponent';
+import Navbar from './components/Navbar/Navbar'; 
+
 
 function App() {
   const [title, updateTitle] = useState(null);

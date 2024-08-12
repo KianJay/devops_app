@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ACCESS_TOKEN_NAME } from '../../constants/apiConstants';
+import Navbar from '../Navbar/Navbar'; // Import Navbar
 
 function Header(props) {
     const navigate = useNavigate();
@@ -34,17 +35,9 @@ function Header(props) {
     return (
         <nav className="navbar navbar-dark bg-primary fancy-header">
             <div className="container-fluid">
-                <div className="navbar-header">
-                    <a className="navbar-brand" href="/">
-                        <img src="/path-to-logo.png" alt="Logo" className="logo" />
-                    </a>
-                </div>
-                <div className="navbar-title">
-                    <span className="h3">{props.title || title}</span>
-                </div>
+            <Navbar /> {/* Add Navbar inside Header */}
+
                 <div className="navbar-nav">
-                    <a className="nav-link" href="/about">About</a>
-                    <a className="nav-link" href="/contact">Contact</a>
                     {renderLogout()}
                 </div>
             </div>
