@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ACCESS_TOKEN_NAME, API_BASE_URL } from '../../constants/apiConstants';
 import axios from 'axios';
 import './Home.css';
+
 function Home() {
   const navigate = useNavigate();
 
@@ -23,8 +24,15 @@ function Home() {
   }
 
   return (
-    <div className="mt-2">
-      Home page content
+    <div className="home-container">
+      <div className="home-header">
+        <h1>Welcome to the Home Page</h1>
+        <p>Your one-stop solution for all your needs.</p>
+      </div>
+      <div className="home-content">
+        <p>Explore our features and services.</p>
+        <button className="btn btn-primary" onClick={redirectToLogin}>Go to Login</button>
+      </div>
     </div>
   );
 }
