@@ -24,14 +24,32 @@ function Home() {
   }
 
   return (
-    <div className="home-container">
-      <div className="home-header">
-        <h1>Welcome to the Home Page</h1>
-        <p>Your one-stop solution for all your needs.</p>
-      </div>
-      <div className="home-content">
-        <p>Explore our features and services.</p>
-        <button className="btn btn-primary" onClick={redirectToLogin}>Go to Login</button>
+    <div>
+      <nav className="navbar">
+        <div className="logo">MyApp</div>
+        <div className="menu">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <div className="dropdown">
+            <a href="#">Services</a>
+            <div className="dropdown-content">
+              <a href="/service1">Service 1</a>
+              <a href="/service2">Service 2</a>
+              <a href="/service3">Service 3</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div className="home-container">
+        <div className="home-header">
+          <h1>Welcome to the Home Page</h1>
+          <p>Your one-stop solution for all your needs.</p>
+        </div>
+        <div className="home-content">
+          <p>Explore our features and services.</p>
+          <button className="btn btn-primary" onClick={redirectToLogin}>Go to Login</button>
+        </div>
       </div>
     </div>
   );
